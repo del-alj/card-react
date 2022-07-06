@@ -2,6 +2,7 @@
 import "./App.css";
 
 import { Card } from "./component/card/index";
+import { Product } from "./pages/product/index";
 function App() {
   return (
     <div className="App">
@@ -15,7 +16,8 @@ function App() {
           alignItems: "center"
         }}
       >
-        <Card />
+        {/* <Card /> */}
+        <Product />
       </div>
     </div>
   );
