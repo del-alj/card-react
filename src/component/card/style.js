@@ -44,6 +44,7 @@ font-size: 0.8em;
 font-family: 'Times New Roman', Times, serif;
 /* text-align: "left"; */
 text-align: justify;
+min-height: 5em;
 max-height: 120px;
 /* overflow: hidden;
 text-overflow: ellipsis;
@@ -60,7 +61,9 @@ padding: 10px 0;
 margin: 1em;
 align-self: center;
 font-weight: 500;
-
+:active {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+}
 `;
 export const Price = styled.p`
 font-size: 1.5em;
