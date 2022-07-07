@@ -10,7 +10,7 @@ function App() {
         style={{
           height: "100%",
           display: "flex",
-          border: "1px solid black",
+          // border: "1px solid black",
           padding: "3em",
           justifyContent: "center",
           alignItems: "center"
