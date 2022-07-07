@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
 import { Div, Img, ListImg, ImgItem, Left, Right } from "./style.js";
-
+import angle from "./angle.png";
 import { Contor } from "../../component/contor/index";
 const img = [
   "https://i.pinimg.com/564x/70/47/9e/70479e82cd530d08b750df0c08de7773.jpg",
@@ -10,10 +9,22 @@ const img = [
 
 export const Slide = () => {
   const [value, setValue] = useState(img[0]);
+  const [i, setI] =  useState(0);
   const handelClick = (e, index) => {
     setValue(img[index]);
   };
+  
+  const handelClickLeft = () => {
+    const temp = i > 0 ? i - 1 : img.length - 1;
+    setI(temp);
+    setValue(img[temp]);
+  };
 
+  const handelClickRight = () => {
+    const temp = i < img.length - 1 ? i + 1 : 0;
+    setI(temp);
+    setValue(img[temp]);
+  };
   return (
     <Div>
       <Img src={value}></Img>
@@ -30,8 +41,8 @@ export const Slide = () => {
           );
         })}
       </ListImg>
-      {/* <Left>`\`</Left>
-      <Right>`/`</Right> */}
+      <Left onClick={handelClickLeft}><img src={angle} /></Left>
+      <Right onClick={handelClickRight}><img src={angle} /></Right>
     </Div>
   );
 };

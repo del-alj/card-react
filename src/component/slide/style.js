@@ -9,29 +9,57 @@ export const Div = styled.div`
   justify-content: space-between;
   padding: 15px 0;
   @media (max-width: 768px) {
-      /* border: 1px solid black; */
+    /* border: 1px solid black; */
   }
 `;
 export const Left = styled.button`
-  width: 3em;
+  width: auto;
   background-color: transparent;
-  /* border: none; */
+  border: none;
   color: ${color.tx};
   font-weight: 600;
   position: absolute;
-left:10%;
-top: 40%;
+  left: 10%;
+  top: 40%;
+  opacity: 0.5;
+  > img {
+    padding: 0;
+    margin: 0;
+    width: 3em;
+  }
+  display: none;
+  :active {
+  margin-left: -5px;
+}
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const Right = styled.button`
-  width: 3em;
+  width: auto;
   position: absolute;
-right: 10%;
-top: 40%;
+  right: 10%;
+  top: 40%;
   background-color: transparent;
-  /* border: none; */
+  border: none;
   color: ${color.tx};
   font-weight: 600;
+  opacity: 0.5;
+  > img {
+    padding: 0;
+    margin: 0;
+    width: 3em;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  display: none;
+:active {
+  margin-right: -5px;
+}
+  @media (max-width: 768px) {
+    display: block;
+  }
 `;
 
 export const Img = styled.div`
@@ -53,9 +81,9 @@ export const ListImg = styled.div`
   width: 70%;
   height: 20%;
   /* border: 1px solid black; */
-@media (max-width: 768px) {
-  display: none;
-}
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ImgItem = styled.div`
